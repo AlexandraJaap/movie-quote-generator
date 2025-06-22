@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
     <title>AI Movie Quote Generator</title>
   </head>
   <body>
@@ -13,7 +15,7 @@
       </header>
 
       <main>
-        <form action="">
+        <form id="quote-generator-form">
           <input
             type="text"
             placeholder="Enter favourite genre"
@@ -24,11 +26,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="quote">
-          The quote will appear here
-          <br />
-          The quote will appear here
-        </div>
+        <div class="quote" id="quote"></div>
       </main>
 
       <footer>
