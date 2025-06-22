@@ -16,7 +16,10 @@ function generateQuote(event) {
     "You are a nerdy IMDB expert, knowing all top 250 movies. You love to recite famous quotes from movies that are well-known. Your mission is to generate a quote, not longer than 5 sentences and separate each line with a <br />. Make sure to follow the user instructions. And always say from what movie the quote is and who has said it.";
   let prompt = `User instructions: Generate an existing Movie Quote, from any top 250 IMDB movie about ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-  // Make a call to the API
+
+  let quoteElement = document.querySelector("#quote");
+  quoteElement.classList.remove("hidden");
+  quoteElement.innerHTML = "...🍿";
 
   axios.get(apiURL).then(displayQuote);
 }
